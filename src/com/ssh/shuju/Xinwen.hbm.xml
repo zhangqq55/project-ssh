@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">   
+    
+<hibernate-mapping package="com.ssh.shuju">
+ <class name="Xinwen" table="lx11_xinwen" lazy="false">
+  <id name="id" type="integer">
+   <generator class="increment"/>
+  </id>
+  <property name="titlea" type="string"/>
+  <property name="contenta" type="string"/>
+  <property name="issuetime" type="string"/>
+  <property name="ly" type="string"/>
+  <many-to-one name="category" class="Category" column="category_id" lazy="false"/>
+ </class>
+</hibernate-mapping>

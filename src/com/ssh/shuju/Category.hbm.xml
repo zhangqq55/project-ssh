@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">   
+    
+    
+<hibernate-mapping package="com.ssh.shuju">
+<class name="Category" table="lx11_category" lazy="false">
+<id name="id" type="integer">
+<generator class="increment"></generator>
+</id>
+<property name="categoryname" type="string"/>
+<set name="xinwen" inverse="true" cascade="all" lazy="false">
+    <key column="category_id"></key>
+    <one-to-many class="Xinwen"/>
+    </set>
+</class>
+</hibernate-mapping>

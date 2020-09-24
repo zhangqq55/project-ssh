@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">   
+    
+    
+<hibernate-mapping package="com.ssh.shuju">
+<class name="Glydenglu" table="lx11_glydl" lazy="false">
+<id name="id" type="integer" column="yonghu">
+<generator class="assigned"></generator>
+</id>
+<property name="password" type="string"/>
+</class>
+</hibernate-mapping>

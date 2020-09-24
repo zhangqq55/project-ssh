@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<package name="cjh" extends="struts-default" namespace="/zc">
+<action name="kcsja" class="categoryaction" method="Cxcategory">
+<result name="success">/kcsj/kcsjsy.jsp</result>
+</action>
+<action name="kcsjb" class="categoryaction" method="Cxleixxw">
+<result name="leixin">/kcsj/kcsjlxxw.jsp</result>
+</action>
+<action name="kcsjc" class="xinwenaction" method="Cxmohu">
+<result name="mohucg">/kcsj/kcsjmohucg.jsp</result>
+</action>
+<action name="addlx" class="categoryaction" method="Addscategory">
+<result name="input">/kcsj/lx11_lxfb.jsp</result>
+<result name="addcg" type="redirect">aaalx.action</result>
+</action>
+<action name="aaalx" class="categoryaction" method="Cxcate">
+<result name="kong">/kcsj/lx11_lxfb.jsp</result>
+<result name="you">/kcsj/lx11_lxck.jsp</result>
+</action>
+<action name="acalx" class="categoryaction" method="Zzcategory">
+<result name="xgcsh">/kcsj/lx11_lxxg.jsp</result>
+</action>
+<action name="abalx" class="categoryaction" method="Gxcategory">
+<result name="gxcg" type="redirect">aaalx.action</result>
+</action>
+<action name="aealx" class="categoryaction" method="Sccategory">
+<result name="sccg" type="redirect">aaalx.action</result>
+</action>
+<action name="*Action" class="xinwenaction" method="{1}">
+<result name="xwkong">/kcsj/lx11_lxfb.jsp</result>
+<result name="xwyou">/kcsj/lx11_xwfb.jsp</result>
+<result name="input">/kcsj/lx11_xwfb.jsp</result>
+<result name="success" type="redirect">CxxinwenAction.action</result>
+<result name="xwcxcg">/kcsj/lx11_xwck.jsp</result>
+<result name="xwgxcg1">/kcsj/lx11_xwxg.jsp</result>
+<result name="xwgxcg2" type="redirect">CxxinwenAction.action</result>
+<result name="xwsccg1" type="redirect">CxxinwenAction.action</result>
+<result name="xwlxcxcg">/kcsj/lx11_xwck.jsp</result>
+<result name="xwckcg11">/kcsj/lx11_ckxw.jsp</result>
+<allowed-methods>Zzaddxinwen,Addxinwen,Cxxinwen,Xgzz,Xgxinwen,Scxinwen,Cxxinwenlx,Cxnr</allowed-methods>
+</action>
+<action name="dlyz" class="glydengluaction" method="Yzdenglu">
+<result name="success">/kcsj/lx11_sy.jsp</result>
+<result name="nopassword">/kcsj/lx11_glydl.jsp</result>
+<result name="noyonghu">/kcsj/lx11_glydl.jsp</result>
+<result name="input">/kcsj/lx11_glydl.jsp</result>
+</action>
+<!--
+<action name="azaxw" class="lx7.XinwenAction" method="Cxnr">
+<result name="success">/lx11_ckxw.jsp</result>
+</action>
+<action name="ayaxw" class="lx7.XinwenAction" method="Cxxinwenlx">
+<result name="success">/lx11_xwck.jsp</result>
+</action>
+<action name="akaxw" class="lx7.XinwenAction" method="Scxinwen">
+<result name="success" type="redirect">ahaxw.action</result>
+</action>
+<action name="ajaxw" class="lx7.XinwenAction" method="Xgxinwen">
+<result name="success" type="redirect">ahaxw.action</result>
+</action>
+<action name="aiaxw" class="lx7.XinwenAction" method="Xgzz">
+<result name="success">/lx11_xwxg.jsp</result>
+</action>
+<action name="agaxw" class="xinwenaction" method="Addxinwen">
+<result name="input">/kcsj/lx11_xwfb.jsp</result>
+<result name="success" type="redirect">ahaxw.action</result>
+</action>
+<action name="ahaxw" class="xinwenaction" method="Cxxinwen">
+<result name="xwcxcg">/kcsj/lx11_xwck.jsp</result>
+</action>-->
+</package>
+</struts>
